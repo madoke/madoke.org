@@ -1,3 +1,7 @@
 .credits {
   font-size: 12px;
 }
+
+.social-networks a:not(:first-child) {
+  padding-left: 20px;
+}
