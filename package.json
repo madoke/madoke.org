@@ -1,0 +1,13 @@
+{
+  "name": "madoke.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:madoke/madoke.github.io.git",
+  "author": "madoke <madoke@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.11.0"
+  }
+}
