@@ -5,3 +5,11 @@
 .social-networks a:not(:first-child) {
   padding-left: 20px;
 }
+
+.social-networks {
+  font-size: 13px;
+}
+
+.photo {
+  max-width: 80%
+}
