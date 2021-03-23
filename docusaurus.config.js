@@ -12,12 +12,16 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: 'Madoke',
+      items: [{
+        to: 'blog',
+        prependBaseUrlToHref: "true",
+        label: 'Articles',
+        position: 'left', // or 'right'
+      }]
     },
     footer: {
       style: 'dark',
-      links: [
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Madoke. Built with Docusaurus, hosted on Github`,
+      copyright: `No copyright ever, No rights reserved. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://github.com">Github</a>`,
     },
   },
   presets: [
