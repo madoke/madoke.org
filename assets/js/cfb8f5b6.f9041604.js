@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{87:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"software-engineering","name":"software-engineering","count":1,"permalink":"/blog/tags/software-engineering"}')}}]);

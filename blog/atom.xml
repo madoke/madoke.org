@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://madoke.org/blog</id>
+    <title>David Simão Blog</title>
+    <updated>2021-03-15T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://madoke.org/blog"/>
+    <subtitle>David Simão Blog</subtitle>
+    <icon>https://madoke.org/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Thoughts on software engineering leadership]]></title>
+        <id>thoughts-on-swe-leadership</id>
+        <link href="https://madoke.org/blog/thoughts-on-swe-leadership"/>
+        <updated>2021-03-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[3 years have passed since I became a lead software engineer (or tech lead) and it's been a challenging run with many achievements and pitfalls. In this article, I try to synthesise what I think are the most important lessons I learned so far in this journey, hoping that they will be useful to other lead engineers who are trying to perform better in their craft. Having led a couple of teams until now, I still have a lot to learn, but I certainly do approach things in a different way than I did some years ago, and the results present themselves in the most unexpected ways. There’s no secret formula to improve your leadership capabilities, It's a learning process pretty much like working with a new language or framework. I started off by reading some blogs and books, but the greatest lessons actually came from trial and error, and constructive feedback from others.]]></summary>
+    </entry>
+</feed>
