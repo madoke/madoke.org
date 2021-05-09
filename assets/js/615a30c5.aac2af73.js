@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{81:function(i){i.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"site-reliability-engineering","name":"site reliability engineering","count":1,"permalink":"/blog/tags/site-reliability-engineering"}')}}]);

@@ -4,9 +4,16 @@
         <title>David Simão Blog</title>
         <link>https://madoke.org/blog</link>
         <description>David Simão Blog</description>
-        <lastBuildDate>Mon, 15 Mar 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 09 May 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[The complete software engineer]]></title>
+            <link>https://madoke.org/blog/the-complete-software-engineer</link>
+            <guid>the-complete-software-engineer</guid>
+            <pubDate>Sun, 09 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Technology and automation are tapping into every possible industry and the demand for software engineers has never been higher.  Building successful companies gets harder every time because of all the competition creating new challenges everywhere, and as more people try to get themselves a good slice of the giant IT pizza, the need for differentiation between engineers becomes crucial to get a taste of that pepperoni.]]></description>
+        </item>
         <item>
             <title><![CDATA[Thoughts on software engineering leadership]]></title>
             <link>https://madoke.org/blog/thoughts-on-swe-leadership</link>

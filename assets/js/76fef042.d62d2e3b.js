@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{83:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"The complete software engineer","permalink":"/blog/the-complete-software-engineer"},{"title":"Thoughts on software engineering leadership","permalink":"/blog/thoughts-on-swe-leadership"}]}')}}]);
