@@ -22,3 +22,6 @@ yarn-error.log*
 # Idea
 *.iml
 .idea
+
+# Deploy env vars
+.env*

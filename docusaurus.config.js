@@ -21,7 +21,7 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      copyright: `No copyright ever, No rights reserved. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://github.com">Github</a>`,
+      copyright: `No copyright ever, No rights reserved. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://ipfs.io">IPFS</a>`,
     },
   },
   presets: [
