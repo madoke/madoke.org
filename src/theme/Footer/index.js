@@ -124,9 +124,10 @@ function Footer() {
               </div>
             )}
             {contacts ? (
-              <div className="margin-bottom--sm">
+              <div className={'footer__items margin-bottom--md'}>
                 {contacts.map((c) => (
-                  <Link target={"_blank"} href={c.href} className={styles.footerContactIcon}>
+                  <Link key={c.href} className={'footer__link-item'} target={"_blank"} href={c.href}
+                        className={styles.footerContactIcon}>
                     <FontAwesomeIcon icon={c.icon}/>
                   </Link>
                 ))}

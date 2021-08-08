@@ -1,6 +1,12 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+
+const blogPath = '/blog'
+const blogTitle = 'David Simao'
+const blogDescription = 'A collection of thoughts and personal opinions about software engineering and life in general'
+const copyright = 'No copyright ever, No rights reserved'
+
 module.exports = {
-  title: 'David Simão',
+  title: 'David Simao',
   tagline: 'Software Engineer',
   url: 'https://madoke.org',
   baseUrl: '/',
@@ -11,17 +17,17 @@ module.exports = {
   projectName: 'madoke.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Madoke',
+      title: 'David Simao',
       items: [{
-        to: 'blog',
-        prependBaseUrlToHref: "true",
-        label: 'Articles',
+        to: blogPath,
+        prependBaseUrlToHref: true,
+        label: 'Blog',
         position: 'left', // or 'right'
       }]
     },
     footer: {
       style: 'dark',
-      copyright: `No copyright ever, No rights reserved. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://ipfs.io">IPFS</a>`,
+      copyright: `${copyright}. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://ipfs.io">IPFS</a>`,
     },
   },
   presets: [
@@ -29,7 +35,19 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         blog: {
+          routeBasePath: blogPath,
+          blogTitle,
+          blogDescription,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'Articles',
           showReadingTime: true,
+          feedOptions: {
+            type: 'all',
+            title: blogTitle,
+            description: blogDescription,
+            copyright,
+            language: 'en-GB',
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

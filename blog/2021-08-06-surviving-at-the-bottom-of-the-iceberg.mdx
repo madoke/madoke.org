@@ -1,0 +1,105 @@
+---
+slug: surviving-at-the-bottom-of-the-iceberg
+title: Surviving at the bottom of the iceberg
+description: Pitfalls of deconstructing monoliths
+author: madoke
+author_title: Software Engineer
+author_url: https://github.com/madoke
+author_image_url: https://avatars.githubusercontent.com/u/185598?s=460&v=4
+image: /assets/images/iceberg-a777f4bac14629d69895f3d6f644451c.jpg
+tags: [software engineering, legacy, monolith, refactoring]
+---
+
+import ImageWithAttribution from "../src/theme/ImageWithAttribution";
+
+Maintenance and evolution of legacy systems is one of the most common challenges faced by software engineers. Every time we produce a line of code and it reaches production, we’re already creating legacy for our future selves or somebody else to look after. If not properly maintained, most systems won’t age well, and therefore most of us will eventually at some point in our careers face a rusty old behemoth that’s important to the business and simply cannot be shut down. The situation is different from company to company but there are some common pitfalls that usually show up. In this article, I will go through the ones that I’ve identified so far and describe the solutions used to circumvent them.
+
+<!--truncate-->
+
+import IcebergImage from './img/iceberg.jpg'
+
+<ImageWithAttribution
+  src={IcebergImage}
+  sourceName={'Unsplash'}
+  authorName={'Alexander Hafemann'}
+  imageName={"Arctic Icebergs in Ilulissat, Greenland"}
+  imageUrl={'https://unsplash.com/photos/M-EwSRl8BK8'}/>
+
+## No space left for maintenance
+
+The ‘legacy’ label is just around the corner for any system and can be applied shortly after a new product release. If the underlying systems are stable enough to run unattended (as they should), your team might feel tempted to forget about them, and the rest of the company will certainly move on to the next challenge. If this happens, chances are, that after a while you will be forced to remember that the software still exists because something started to fail. The problem now is that its framework and runtimes are outdated, or your CI/CD has changed and you can no longer operate it like the other services because there’s a big technical debt to clear.
+For most systems, this is inevitable and most certainly will happen because a company’s resources in terms of manpower are limited. However, it is definitely possible to mitigate the impacts in the components that that we believe that are core to the business and will be around for a while.
+There are two important things to understand here:
+- Maintenance is not a feature, so if you really need your system to be reliable and scalable, there is a permanent stream of work that should be kept going in parallel with everything else. The less effort you put into it, the bigger the debt to pay further ahead;
+- The responsibility belongs to the whole company, rather than the engineering team alone. I’ve tried to handle maintenance and scalability in the past by “self organizing” the team or over estimating other projects and it didn’t last long because the business would eventually reclaim the time we spent clearing tech debt with more agressive dates or workload. It really needs to be part of the team’s public roadmap, so that everyone understands what’s going on.
+
+As a software engineer, leader or not it is your responsibility to make it very clear to everyone why maintenance is needed and how much will it cost, as well as what are the consequences of not doing it. You will probably need to repeat it more than once because it goes against all that “fail fast” and “time to market” jargon, so people outside engineering will probably be more reluctant to accept trading speed for stability. A good strategy that’s helped me so far is to produce a document with the overall technical strategy that I use as a support in several meetings and everyone can access it after.
+If the need is clear and everyone buys in, then you can officially allocate capacity for maintenance and scalability on every system owned by your teams.
+
+
+## Outdated Technology
+
+“If you think your software is up to date, just wait a couple of months” - myself (Adapted from Mark Twain’s original: “If you don’t like the weather in New England, just wait a few minutes”)
+
+It’s fairly easy to build stable and long lasting software that can remain untouched and reliable for years in production. However, it is a different story to keep it up to date, and usually cannot be done without proper and dedicated maintenance.
+As you read this article, there are probably people working on improving the JVM internals, a new release of the golang compiler, bugfixes in kubernetes, 15 new JavaScript frameworks, and the list goes on. The tech ecosystem evolves at a much faster pace because there are thousands of people working on it, whereas your app, only depends on you or your team.
+Having that said, outdated tech stacks are the most common scenario for legacy software and this is a problem for your team because it will keep on increasing the  technical debt and the maintenance overhead. You need dedicated people to fix this but don’t think about refactoring/reimplementing just yet. That’s a common mistake that we as developers usually make because we love to build shiny new things. Instead, try to assess if you can bring this project closer to the others by
+- Integrating the existing ci/cd pipeline system for automated builds, testing and deploys
+- Using the same runtime and infrastructure   (E.g: Kubernetes)
+- Upgrading frameworks and runtimes to the latest LTS version
+If you can clear these, it will lower the maintenance overhead and it creates better conditions for refactoring and reimplementing should the opportunity present itself
+
+
+## Nobody wants to touch it
+
+As developers, we always prefer to start from scratch, rather than picking up somebody else’s code, even if it’s brilliantly designed. Improving or refactoring an application built ages ago, in a language or technology that’s not sexy anymore is something that won’t naturally motivate young teams, especially if they need to clean up messy code and processes. There are two strategies that helped me motivate my teams so far:
+- Always have a visible plan and keep reminding everyone about the end game. Pretty much like the technical roadmap is needed to justify your team’s allocation, you need to establish a mission and a contract with your team, so that those boring and unappealing tasks can be seen as a necessary evil to a greater good
+- Include senior developers in the project. More experienced people tend to create less friction and will be able to understand your vision more quickly and help you out spreading it. Don’t forget that we’re all social creatures, and tend to follow good examples.
+
+
+## Few people to nobody know how to operate it
+
+It is also a very common situation. Devs are always moving between companies, leaving a trail of software behind. Working on something that already exists is far more common than building something new. So if you’ve just inherited a giant whale of code, developed by a team of unknown heroes who left nothing but a couple of empty documentation pages and good luck wishes behind, it’s time to get acquainted with it.
+It will take you some time, and it will not be fun but you need to do it before you can actually have a plan. Otherwise you will be changing your plan every time a new variable comes up.
+Gather everyone that was involved with the project, do some workshops, ask some questions and start building the documentation that never existed. Some points that might guide you in this quest:
+- How do the customers use your application
+- What are the core features
+- Who else inside the company uses the application and how do they use it
+- How is it deployed to production
+- How is it tested
+- What are the main components and what kind of coupling there is between them
+
+With greater knowledge about the plataform and the application you will be better equipped to build a technical strategy plan that’s more realistic and useful to the business
+
+
+## The business does not stop
+
+In most companies, software stability and scalability are variables that usually don’t take part in business decisions like closing a new deal, onboarding a new customer or requesting a feature. This can happen for a number of reasons, which typically boil down to internal issues of some sort like strategy or communication. It can be a big source of frustration for everyone, so in order to overcome it, it will sometimes require everyone to be more objective and pragmatic. Bottomline is that people that are selling/using your product will assume that it works and scales seamlessly, which is your responsibility as an engineer to guarantee. The important thing here is to be able to properly identify and understand the business rules and act accordingly. Some useful guidelines that have helped me so far
+- Make the platform status visible to everyone at all times
+- If the product isn’t released yet and you need time to invest in stability and scalability it is better to do it now
+- If the product is already launched you might need to ‘stop the bleeding’ before thinking about adding features or refactoring
+- Everything will be a lot smoother if you know the business, the customers, and everyone involved in the operation from sales to infrastructure
+
+
+## Rebuilding or reimplementing
+
+Reimplementing everything from scratch
+
+Splitting the logic into microservices
+
+Building components on the side
+
+
+## Final remarks
+
+Get acquainted with the platform
+
+Buy in from the whole company
+
+Always have a plan visible for everybody
+
+Update and modernize before refactoring
+
+
+
+
