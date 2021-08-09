@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 
 const blogPath = '/blog'
-const blogTitle = 'David Simao'
+const blogTitle = 'Welcome to the Jungle'
 const blogDescription = 'A collection of thoughts and personal opinions about software engineering and life in general'
 const copyright = 'No copyright ever, No rights reserved'
 
