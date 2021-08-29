@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "deploy-ipfs": "ipfs-deploy -d cloudflare -p pinata -p ipfs-cluster build"
+    "deploy-ipfs": "ipfs-deploy --hidden -d cloudflare -p pinata build"
   },
   "dependencies": {
     "@babel/core": "^7.15.0",
