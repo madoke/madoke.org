@@ -85,9 +85,7 @@ The reasons for a legacy system to become uninteresting are typically related to
 
 ## Can I refactor this ?
 
-> “If you think your software is up-to-date, just wait a couple of months” - *Myself* (Adapted from Mark Twain’s original: “If you don’t like the weather in New England, just wait a few minutes”)
-
-It’s fairly easy to build stable and long-lasting software that can remain untouched and reliable for years in production. However, it's a different story to keep it updated, and it usually cannot be done without proper maintenance.
+If you think your software is up-to-date, just wait a couple of months. It’s fairly easy to build stable and long-lasting software that can remain untouched and reliable for years in production. However, it's a different story to keep it updated, and it usually cannot be done without proper maintenance.
 As you read this article, there are probably people working on improving the JVM internals, a new release of the golang compiler, bugfixes in kubernetes, 15 new JavaScript frameworks, and the list goes on. The tech ecosystem evolves at a much faster pace because there are thousands of people working on it, whereas your app, only depends on you or your team.
 Having that said, outdated tech stacks are the most common scenario for legacy software and this is a problem for your team because it will keep on increasing the technical debt and the maintenance overhead. When paired with bad code practices, the mixture is explosive. So what to do ? Refactor or reimplement the whole thing in `<NEW_TRENDY_TECH>` right ? It's tempting to do a File > New Project straight away (I've done it hundreds of times), however things can get quickly out of hand because there is a very high cost associated with redoing something for scratch (Just think about everything that's not the actual code: tests, logs, monitoring, CI/CD, etc). If the system is critical, and you can't operate it, you probably want to invest some time in fixing it first, or at least making it easier to use/get acquainted. There are some popular actions that usually apply to most cases:
 
