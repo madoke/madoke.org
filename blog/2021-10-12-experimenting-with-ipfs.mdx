@@ -1,0 +1,34 @@
+---
+slug: experimenting-with-ipfs
+title: Experimenting with IPFS
+description: Pitfalls of deconstructing monoliths
+authors: madoke
+image: /assets/images/iceberg-a777f4bac14629d69895f3d6f644451c.jpg
+tags: [software engineering, ipfs, web3, decentralized]
+---
+
+Discussions about decentralized applications are becoming popular across multiple industries. Fueled by the growing concerns around centralized internet giants, and the cryptocurrency boom, new technologies like the [Inter Planetary File System](https://ipfs.io) (IPFS) are emerging with the promise of re-decentralizing the web. While not being a fundamentalist, the whole idea of self-hosting a decentralized, censorship resistant app (this blog) felt like an awesome thing to do, and set me on a challenging journey to build an infrastructure to deploy this website on IPFS. Below I'll discuss the ups and downs and what I've learned about IPFS and the current state of the decentralized web.
+
+<!--truncate-->
+
+## TL/DR
+
+- I strongly believe self-hosting is somewhere down the road to decentralization and tried to go that route
+- Self-hosting is not easy, so I've accepted the tradeoff of using cloud servers to run my IPFS nodes
+- Cloud provider, CDN and DNS can still take my website down or at least degrade it (So much for self-hosting and decentralization)
+- Content resolution using DNSLink and the Cloudflare IPFS Gateway are a bit slow until the content is cached, forcing me to rollback to classic static page hosting to get the desired performance and availability
+- We need to start standardizing some technologies so that browsers can adopt them and change the way we access content online
+
+## Self-hosting
+
+Unlike bitcoin and other blockchain based systems that replicate state across the network, files on IPFS are stored in different nodes, and their address/identifier ([CID](https://docs.ipfs.io/concepts/content-addressing/)) is broadcast to a distributed hash table ([DHT](ipns://docs.ipfs.io/concepts/dht/)). Therefore, for this website to be available it needs to be uploaded to an IPFS node that's highly available 24/7 otherwise users could experience downtime.
+
+The great majority of applications available online at the time of this writing are running in infrastructure that is now owned either by the user or the developer. On his article about [self-hosting and decentralization](https://mccormick.cx/news/entries/on-self-hosting-and-decentralized-software) Chris McCormick states that the entry barriers inherent to self-hosting web applications created a market for big companies like Amazon to remove those barriers, ultimately leading to internet centralization. Even the websites on IPFS (probably most of them) claiming to be [Web 3.0](https://blog.coinbase.com/understanding-web-3-a-user-controlled-internet-a39c21cf83f3) and decentralized, are hosted by services like [Pinata](https://www.pinata.cloud/) or [Infura](https://infura.io/), which are awesome and reliable but exist because it's still complicated for an average user to self-host a web app and achieve the same availability and performance standards established by industry leaders.
+
+Having that said, renting a cloud server to host my own ipfs nodes, as opposed to actually build the physical infrastructure and connect it somewhere in my apartment sounded like a fairly standard tradeoff between self-hosting and no hosting at all.
+
+## Building the infrastructure
+
+## Gains and losses
+
+## The web needs more time to move on
