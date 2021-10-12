@@ -1,11 +1,13 @@
 ---
 slug: experimenting-with-ipfs
 title: Experimenting with IPFS
-description: Pitfalls of deconstructing monoliths
+description: Lessons learned from deploying this blog on IPFS
 authors: madoke
 image: /assets/images/iceberg-a777f4bac14629d69895f3d6f644451c.jpg
 tags: [software engineering, ipfs, web3, decentralized]
 ---
+
+import { Mermaid } from 'mdx-mermaid/Mermaid';
 
 Discussions about decentralized applications are becoming popular across multiple industries. Fueled by the growing concerns around centralized internet giants, and the cryptocurrency boom, new technologies like the [Inter Planetary File System](https://ipfs.io) (IPFS) are emerging with the promise of re-decentralizing the web. While not being a fundamentalist, the whole idea of self-hosting a decentralized, censorship resistant app (this blog) felt like an awesome thing to do, and set me on a challenging journey to build an infrastructure to deploy this website on IPFS. Below I'll discuss the ups and downs and what I've learned about IPFS and the current state of the decentralized web.
 
@@ -29,6 +31,37 @@ Having that said, renting a cloud server to host my own ipfs nodes, as opposed t
 
 ## Building the infrastructure
 
-## Gains and losses
+Setting up an IPFS node is quite simple, and the official docs have a [very comprehensive guide](http://docs.ipfs.io/install/server-infrastructure/#server-infrastructure). It's a good place to start but when setting up a production infrastructure with more than one server or component, an orchestration tool is recommended. If I were to start over today, I'd probably use docker for the whole setup, but I bumped into [ansible-ipfs-cluster](https://github.com/hsanjuan/ansible-ipfs-cluster) which worked quite well and was a good opportunity to make some [contributions (pending merge)](https://github.com/hsanjuan/ansible-ipfs-cluster/pull/10) to the project itself. The `ipfs` daemon by itself is able to connect to other peers in the network and service its own content via the HTTP API (Gateway). Redundancy is achieved with [`ipfs-cluster`](https://cluster.ipfs.io), which synchronizes content across a swarm of IPFS nodes using [RAFT or CRDT consensus](https://cluster.ipfs.io/documentation/guides/consensus).
+
+### Exposing the website over HTTP
+
+One of the greatest things about IPFS is that, for the sole purpose of sharing files like static webpages, the HTTP endpoint doesn't need to be exposed, and therefore we also don't need to worry about TLS certificates, Caching, DDoS, etc. As long as the files are stored by a node, any IPFS Gateway is able to retrieve them, making it possible to invert the logic of serving content online, by having the HTTP gateways pull content from the network using their nodes, provided that everyone would have access to its own private IPFS gateway and node. But we're not quite there yet, so in order to bridge he gap with the internet we use today, Cloudflare, Pinata, and many other companies adopting IPFS host public gateways so that we can access files [the same way we always did](https://gateway.ipfs.io/ipfs/QmZ4tDuvesekSs4qM5ZBKpXiZGun7S2CYtEZRB3DYXkjGx). To make it all even more seamless, a standard called [DNSLink](https://dnslink.dev) was proposed by [Protocol Labs](https://protocol.ai), the company behind IPFS, to allow linking a DNS record to any type of content.
+
+Having said all of that, I chose to use Cloudflare's DNS Registrar and public IPFS Gateway because they have quite good [documentation](https://developers.cloudflare.com/distributed-web/ipfs-gateway) and support... and it's almost free. The image below illustrates the first setup and it pretty much resembles a common web stack: self-hosted files, hidden behind Cloudflare.
+
+<Mermaid chart={`graph LR;
+  browser
+  self-hosted-ipfs-cluster
+  subgraph Cloudflare
+    cloudflare-ipfs-gateway
+    cloudflare-ipfs-nodes
+  end
+  browser --> cloudflare-ipfs-gateway
+  cloudflare-ipfs-gateway --> cloudflare-ipfs-nodes
+  cloudflare-ipfs-nodes --> self-hosted-ipfs-cluster
+`} />
+
+### Deploying files to the cluster
+
+At this point, adding files to the ipfs nodes was fairly simple when done manually, provided that the files were already available to the `ipfs` daemon. That's ok for experimenting but it becomes a little impractical for automating with a CI/CD tool like github actions, for example. It didn't took me too long to find [ipfs-deploy](https://github.com/ipfs-shipyard/ipfs-deploy), an npm package that is able to pin content to several different IPFS Pinning services, and change the DNSLink using Cloudflare's API. Getting it to work with the current setup was a different story. As said before, up until now, the ipfs cluster's HTTP API wasn't publicly available because it wasn't needed for accessing the files. However, `ipfs-deploy` and pretty much any other ipfs deployment tool will need the IPFS cluster API to upload and pin the files. I've started with a standard approach, nginx + letsencrypt, to at least have some access control and security (Auth and TLS termination), however an [issue with go-ipfs and nginx](https://github.com/ipfs/go-ipfs/blob/master/docs/production/reverse-proxy.md), which obviously only presented itself after everything was properly setup, forced me to directly expose the cluster API using its [security features](https://cluster.ipfs.io/documentation/reference/configuration/#restapi). The last problem down the road [was related to certbot](https://github.com/geerlingguy/ansible-role-certbot/issues/156), turns out that certbot runs as root, and if the user running `ipfs` and `ipfs-cluster` can't escalate privileges like standard nginx installations, it won't be able to use the certificates. It was solved with a good old `chmod 644`, which I'm not very proud of.
+
+After all of this madness, the setup to host and deploy this website using IPFS was up and running, and madoke.org was available on IPFS. If you want to build something similar, I've shared the [ansible-playbook](http://github.com/madoke) that does all of this, hoping that it might be useful at some point in the future.
+
+## Final Results
+
+
 
 ## The web needs more time to move on
+
+
+https://medium.com/pinata/the-ipfs-gateway-problem-64bbe7eb8170

@@ -35,6 +35,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         blog: {
+          remarkPlugins: [require('mdx-mermaid')],
           routeBasePath: blogPath,
           blogTitle,
           blogDescription,
