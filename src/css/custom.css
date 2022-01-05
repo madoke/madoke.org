@@ -15,6 +15,8 @@
   --ifm-color-primary-light: #0b9fbc;
   --ifm-color-primary-lighter: #0ba7c5;
   --ifm-color-primary-lightest: #0dbcde;
+
+  --ifm-font-family-base:  "Lato","Helvetica","Arial",sans-serif;
 }
 
 .docusaurus-highlight-code-line {
