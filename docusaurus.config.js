@@ -20,7 +20,7 @@ module.exports = {
       title: 'David Simao',
       items: [{
         to: blogPath,
-        prependBaseUrlToHref: 'true',
+        prependBaseUrlToHref: true,
         label: 'Blog',
         position: 'left', // or 'right'
       }]
