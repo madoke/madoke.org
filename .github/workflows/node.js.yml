@@ -9,6 +9,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      IPFS_DEPLOY_CLOUDFLARE__API_EMAIL: ${{ secrets.CLOUDFLARE__API_EMAIL }}
+      IPFS_DEPLOY_CLOUDFLARE__API_TOKEN: ${{ secrets.CLOUDFLARE__API_TOKEN }}
+      IPFS_DEPLOY_CLOUDFLARE__ZONE: ${{ secrets.CLOUDFLARE__ZONE }}
+      IPFS_DEPLOY_CLOUDFLARE__RECORD: ${{ secrets.CLOUDFLARE__RECORD }}
+      IPFS_DEPLOY_PINATA__API_KEY: ${{ secrets.PINATA__API_KEY }}
+      IPFS_DEPLOY_PINATA__SECRET_API_KEY: ${{ secrets.PINATA__SECRET_API_KEY }}
+
     steps:
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.3.0
