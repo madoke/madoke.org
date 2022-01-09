@@ -27,7 +27,7 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      copyright: `${copyright}. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://ipfs.io">IPFS</a>`,
+      copyright: `${copyright}. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://pages.cloudflare.com">Cloudflare Pages</a> and <a href="https://ipfs.io">IPFS</a> via <a href="https://fleek.co">Fleek.co</a>`,
     },
   },
   presets: [
