@@ -1,0 +1,11 @@
+/* Image and Caption Adjustments*/
+.post-content img {
+  border-radius: 4px;
+   margin: 0;
+}
+.post-content figure>figcaption {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: right;
+}
