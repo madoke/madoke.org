@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: madoke.org
-Token: 8d047ca1c331551138a6925a679c7435081d44fe2608eb17448ae279b64baa9a

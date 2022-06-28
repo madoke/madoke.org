@@ -1,0 +1,38 @@
+baseURL: 'https://madoke.org/'
+languageCode: 'en-us'
+title: 'David Simão'
+permalinks:
+  posts: '"blog/:slug'
+theme: 'PaperMod'
+params:
+  defaultTheme: auto
+  disableThemeToggle: false
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/madoke"
+    - name: "linkedin"
+      url: "https://linkedin.com/david.simao"
+    - name: "keybase"
+      url: "https://keybase.io/madoke"
+    - name: "pgp"
+      url: "/pgp.txt"
+  ShowReadingTime: true
+  ShowToc: true
+  ShowBreadCrumbs: false
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
