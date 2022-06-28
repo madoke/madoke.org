@@ -6,8 +6,8 @@ const blogDescription = 'A collection of thoughts and personal opinions about so
 const copyright = 'No copyright ever, No rights reserved'
 
 module.exports = {
-  title: 'David Simao',
-  tagline: 'Software Engineer',
+  title: 'David Simão',
+  tagline: 'What there is to know about David Simao',
   url: 'https://madoke.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -17,7 +17,7 @@ module.exports = {
   projectName: 'madoke.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'David Simao',
+      title: 'David Simão',
       items: [{
         to: blogPath,
         prependBaseUrlToHref: true,
@@ -27,13 +27,14 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      copyright: `${copyright}. Built with <a href="https://docusaurus.io/">Docusaurus</a>, hosted on <a href="https://pages.cloudflare.com">Cloudflare Pages</a> and <a href="https://ipfs.io">IPFS</a> via <a href="https://fleek.co">Fleek.co</a>`,
+      copyright: `Nobody uses footers anymore. Yet, here we stand.`,
     },
   },
   presets: [
     [
       '@docusaurus/preset-classic',
       {
+        docs: false,
         blog: {
           remarkPlugins: [require('mdx-mermaid')],
           routeBasePath: blogPath,
