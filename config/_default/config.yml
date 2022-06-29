@@ -1,30 +1,45 @@
 baseURL: 'https://madoke.org/'
 languageCode: 'en-us'
 title: 'DS'
+paginate: 5
+theme: 'PaperMod'
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+pygmentsUseClasses: true
 permalinks:
   posts: '"blog/:slug'
-theme: 'PaperMod'
+
 params:
   defaultTheme: auto
   disableThemeToggle: false
   homeInfoParams:
     Title: David Simão
     Content: >
-      Welcome to my page ! I'm David and I'm a Staff Engineer at Truphone, specializing in backend, databases and distributed systems. I like programming, video-games, beer, formula 1 and occasionally writing about software engineering or life in general.
+      Welcome to my page ! I'm a Staff Engineer at Truphone, specializing in backend, databases and distributed systems. I like programming, video-games, beer, formula 1 and occasionally writing about software engineering or life in general.
   socialIcons:
     - name: "github"
       url: "https://github.com/madoke"
     - name: "linkedin"
-      url: "https://linkedin.com/david.simao"
+      url: "https://www.linkedin.com/in/davidsimao/"
     - name: "keybase"
       url: "https://keybase.io/madoke"
     - name: "pgp"
       url: "/pgp.txt"
+  author: David Simão
+  ShowPostNavLinks: true
   ShowReadingTime: true
   ShowToc: true
   ShowBreadCrumbs: false
   ShowShareButtons: true
   ShowCodeCopyButtons: true
+  displayFullLangName: true
+  editPost:
+    URL: "https://github.com/madoke/madoke.org/tree/master/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
 
 markup:
   goldmark:

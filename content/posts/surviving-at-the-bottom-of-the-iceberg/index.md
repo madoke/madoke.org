@@ -2,9 +2,9 @@
 slug: surviving-at-the-bottom-of-the-iceberg
 title: Surviving at the bottom of the iceberg
 description: Pitfalls of deconstructing monoliths
-authors: madoke
-image: /assets/images/iceberg-a777f4bac14629d69895f3d6f644451c.jpg
-tags: [software engineering, legacy, monolith, refactoring]
+author: David Simão
+categories: [Software Engineering]
+tags: [Software Engineering, Legacy, Monolith, Refactoring, Scalability, Business Value]
 date: 2021-08-06T00:00:00+00:00
 ---
 

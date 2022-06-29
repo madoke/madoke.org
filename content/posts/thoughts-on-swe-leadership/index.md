@@ -2,9 +2,9 @@
 slug: thoughts-on-swe-leadership
 title: Thoughts on software engineering leadership
 description: My personal experience with engineering leadership and the conclusions withdrawn from it
-authors: madoke
-image: /assets/images/mentoring-839b76d0fd6d97c35147ed3c71c78180.jpg
-tags: [software engineering, leadership]
+authors: David Simão
+categories: [Software Engineering, Technical Leadership]
+tags: [Software Engineering, Leadership, Management, Architecture, Company Culture]
 date: 2021-03-15T00:00:00+00:00
 ---
 

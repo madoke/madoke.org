@@ -32,8 +32,9 @@
           {{- .Title | markdownify }}
           {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
         </h3>
-        <div class="archive-meta">
-          {{- partial "post_meta.html" . -}}
+        <div class="archive-entry-description">
+          {{- .Description | markdownify }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
         </div>
         {{ if (.Param "externalUrl") }}
           <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Params.externalUrl }}" target="_blank"></a>

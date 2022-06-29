@@ -2,9 +2,9 @@
 slug: the-complete-software-engineer
 title: The complete software engineer
 description: A walkthrough the hard and soft skills that can make a better software engineer
-authors: madoke
-image: /assets/images/swiss-army-knife-02b24a26b6374e84621dfce26daf1754.jpg
-tags: [software engineering, devops, site reliability engineering, company culture]
+authors: David Simão
+categories: [Career Development, Software Engineering]
+tags: [Software Engineering, DevOps, SRE, Company Culture, Security, Observability, Monitoring, Documentation, Product]
 date: 2021-05-09T00:00:00+00:00
 ---
 
