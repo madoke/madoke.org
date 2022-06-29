@@ -1,8 +1,8 @@
 ---
 main:
   - name: Blog
-    url: blog
+    url: /blog
     weight: 1
   - name: About
-    url: about
+    url: /about
     weight: 2
