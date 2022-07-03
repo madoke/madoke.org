@@ -1,7 +1,7 @@
 ---
 slug: docusaurus-gatsby-hugo
 title: Docusaurus vs Gatsby vs Hugo
-description: Comparing Docusaurus, Gatsby and Hugo, and why I chose to use Hugo for implementing this blog
+description: Comparing Docusaurus, Gatsby and Hugo, as blogging frameworks and why I chose to use Hugo for implementing my own blog
 author: David Simão
 categories: [Software Engineering, Website Frameworks]
 tags: [Development, Docusaurus, Hugo, Gatsby, Blog, Markdown, Static Website]
@@ -30,7 +30,7 @@ The best way to create static websites with React, according to their [documenta
 
 ### Hugo
 
-The oldest of the three, Hugo is general purpose like Gatsby, but includes a significantly large catalogue of community developed themes, which allow the developer to build portfolio pages, blogs, wikis, even stores through configuration and customization of those themes. It supports Markdown and HTML (not React) and it is built in Golang while the previous two use JavaScript/TypeScript. runs in golang
+The oldest of the three, Hugo is general purpose like Gatsby, but includes a significantly large catalogue of community developed themes, which allow the developer to build portfolio pages, blogs, wikis, even stores through configuration and customization of those themes. It supports Markdown and HTML (not React) and it is built in Golang while the previous two use JavaScript/TypeScript.
 
 ## Community and Maintenance
 
@@ -115,4 +115,4 @@ I started looking for alternatives to Docusaurus, ultimately because I wanted to
 
 Gatsby excels where Docusaurus fails, allowing all the customization I needed and much more. It's a very complete web development framework, but on the other hand, it requires much more development effort to get something out of it (it fails were Docusaurus excels). I'd probably go with gatsby if I wanted to build a static website with its own design, and specific functionality, from the ground up, without built-in styles and components.
 
-Ultimately I ended up sticking to Hugo because it was the framework that offered less friction to set up the blog/webpage that I had in mind. It's obviously less flexible than gatsby, but the component override system is really simple and well documented. Did I already mention that development cycles are blazing fast ? I'm using the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme, one of the most common, and while I probably won't be able to move away from these styles and somehow dramatically change it, I can override html templates and reuse CSS classes or add new ones, without much trouble. If you're looking into Hugo and want to try it out, be sure to check [@nunocoracao's getting started guide](https://nunocoracao.com/posts/202206-homepage-guide/), which is an awesome place to start playing around with it.
+Ultimately I ended up sticking to Hugo because it was the framework that offered less friction to set up the blog/webpage that I had in mind. It's obviously less flexible than gatsby, but the component override system is really simple and well documented. Did I already mention that development cycles are blazing fast ? I'm using the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme, one of the most common, and while I probably won't be able to move away from these styles and somehow dramatically change it, I can override html templates and reuse CSS classes or add new ones, without much trouble. If you're looking into Hugo and want to try it out, be sure to check out Nuno Coração's [getting started guide](https://nunocoracao.com/posts/202206-homepage-guide/), which is an awesome place to start playing around with it.
