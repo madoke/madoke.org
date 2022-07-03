@@ -18,7 +18,7 @@ params:
   homeInfoParams:
     Title: David Simão
     Content: >
-      Welcome to my page ! I'm a Staff Engineer at Truphone, specializing in backend, databases and distributed systems. I like programming, video-games, beer, formula 1 and occasionally writing about software engineering or life in general.
+      Welcome to my page ! I'm a Software Engineer, specializing in backend, databases and distributed systems. I like programming, video-games, beer, formula 1 and occasionally writing about software engineering or life in general.
   socialIcons:
     - name: "github"
       url: "https://github.com/madoke"
