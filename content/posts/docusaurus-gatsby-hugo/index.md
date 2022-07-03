@@ -1,7 +1,7 @@
 ---
 slug: docusaurus-gatsby-hugo
 title: Docusaurus vs Gatsby vs Hugo
-description: Comparing Docusaurus, Gatsby and Hugo, and why I chose to go with Hugo
+description: Comparing Docusaurus, Gatsby and Hugo, and why I chose to use Hugo for implementing this blog
 author: David Simão
 categories: [Software Engineering, Website Frameworks]
 tags: [Development, Docusaurus, Hugo, Gatsby, Blog, Markdown, Static Website]
@@ -97,7 +97,22 @@ Hugo provides a couple of templates for simple, blank pages, articles and articl
 
 ## Performance
 
-Note that in what comes to performance, we're talking about compilation times only, since runtime 
+This is a very simple comparison of build and page load times across the three frameworks. All tests were performed on the same machine (my laptop), and the numbers are relative to its hardware specs. Below is a comparison of build times for generating production and development builds, as well as hot reloading in development mode.
 
+![Build Performance](./img/build-performance.png "Build times comparison for production, development and hot reload")
+
+Notice that I needed to change the Y axis to logarithmic scale such is the difference between Hugo and the rest. This is likely to be related with the fact of running natively (golang) rather than in the nodejs runtime, but mostly because Hugo does much less than the other two at build time, since it doesn't need to perform all the heavy lifting required to build a React application.
+
+The generated builds are very close to each other in terms of performance, in this case I just measured the time to load the blog listing page on all three frameworks, and the results are similar, so the Y axis has a linear scale in here.
+
+![Runtime Performance](./img/runtime-performance.png)
+
+Because Hugo's generated pages are tightly couple with the theme, this values might have been different if I were using a different theme. Nevertheless, it's possible to conclude that in terms of performance, the end result is more or less the same, but with Hugo, development cycles and iterations are necessarily slower. Not that this had much impact in the final decision but is still worth mentioning.
 
 ## Final Remarks
+
+I started looking for alternatives to Docusaurus, ultimately because I wanted to move away from their theme, and also to customize a little more the main page layout (i.e. add a list of recent posts). While all of this is possible in Docusaurus, it's not straightforward, and definitely not well covered in the docs. I'd probably still use it for building API, SDK or open source project documentation because it is exactly what it was built for, and these are use cases where typically we're good with standard styles and layout.
+
+Gatsby excels where Docusaurus fails, allowing all the customization I needed and much more. It's a very complete web development framework, but on the other hand, it requires much more development effort to get something out of it (it fails were Docusaurus excels). I'd probably go with gatsby if I wanted to build a static website with its own design, and specific functionality, from the ground up, without built-in styles and components.
+
+Ultimately I ended up sticking to Hugo because it was the framework that offered less friction to set up the blog/webpage that I had in mind. It's obviously less flexible than gatsby, but the component override system is really simple and well documented. Did I already mention that development cycles are blazing fast ? I'm using the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme, one of the most common, and while I probably won't be able to move away from these styles and somehow dramatically change it, I can override html templates and reuse CSS classes or add new ones, without much trouble. If you're looking into Hugo and want to try it out, be sure to check [@nunocoracao's getting started guide](https://nunocoracao.com/posts/202206-homepage-guide/), which is an awesome place to start playing around with it.
