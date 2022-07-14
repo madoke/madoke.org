@@ -11,6 +11,7 @@ buildExpired: false
 pygmentsUseClasses: true
 permalinks:
   posts: '"blog/:slug'
+copyright: No rights reserved.
 
 params:
   defaultTheme: auto

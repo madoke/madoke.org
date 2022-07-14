@@ -1,7 +1,7 @@
 ---
 slug: an-ipfs-adventure
 title: An IPFS adventure
-description: Lessons learned from building an IPFS cluster to host this blog, and the general state of Web3
+description: Excited with all the Web3 and self-hosting hype, I've set myself on a mission to self-host this blog on a self-hosted IPFS cluster. Here's what I learned from it
 author: David Simão
 categories: [Web3, Architecture]
 tags: [Development, IPFS, Web3, Decentralization, Filesystem, Storage]

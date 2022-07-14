@@ -1,7 +1,7 @@
 ---
 slug: surviving-at-the-bottom-of-the-iceberg
 title: Surviving at the bottom of the iceberg
-description: Pitfalls of deconstructing monoliths
+description: A classic tale of a team that deluded themselves with the mirage of breaking a monolith into shiny new microservices on a limited budget, understaffed and fast-paced environment
 author: David Simão
 categories: [Software Engineering]
 tags: [Software Engineering, Legacy, Monolith, Refactoring, Scalability, Business Value]
