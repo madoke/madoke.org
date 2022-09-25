@@ -2,5 +2,5 @@
 	path = themes/PaperMod
   url = https://github.com/adityatelange/hugo-PaperMod
 [submodule "themes/blowfish"]
-	path = themes/PaperMod
+	path = themes/blowfish
   url = https://github.com/nunocoracao/blowfish
