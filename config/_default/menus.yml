@@ -6,3 +6,6 @@ main:
   - name: About
     url: about
     weight: 2
+  - name: Search
+    url: search
+    weight: 2

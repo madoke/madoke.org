@@ -1,0 +1,8 @@
+.footer a {
+  text-decoration: none;
+  color: var(--primary);
+  border: none;
+}
+.footer a:hover {
+  border: none;
+}
