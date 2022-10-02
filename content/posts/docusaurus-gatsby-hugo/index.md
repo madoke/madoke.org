@@ -6,6 +6,7 @@ author: David Simão
 categories: [Software Engineering, Website Frameworks]
 tags: [Development, Docusaurus, Hugo, Gatsby, Blogging, Markdown, React, Javascript, Typescript, Static Website]
 date: 2022-07-01T00:00:00+00:00
+showSummary: true
 ---
 
 ![Logos](./img/logos.png)

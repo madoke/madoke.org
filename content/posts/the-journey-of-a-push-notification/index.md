@@ -7,5 +7,6 @@ author: David Simão
 categories: [Software Engineering, Architecture]
 tags: [Software Engineering, Apple, Google, I18n, Push Notifications, iOS, Android, Architecture]
 date: 2019-08-14T00:00:00+00:00
+showSummary: true
 ---
 Lessons learned from building a push notification system for a cross-platform mobile application at Truphone

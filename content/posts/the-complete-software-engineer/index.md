@@ -6,6 +6,7 @@ authors: David Simão
 categories: [Career Development, Software Engineering]
 tags: [Software Engineering, DevOps, SRE, Company Culture, Security, Observability, Monitoring, Documentation, Product]
 date: 2021-05-09T00:00:00+00:00
+showSummary: true
 ---
 
 Technology and automation are tapping into every possible industry and the demand for software engineers has never been higher.  Building successful companies gets harder every time because of all the competition creating new challenges everywhere, and as more people try to get themselves a good slice of the giant IT pizza, the need for differentiation between engineers becomes crucial to get a taste of that pepperoni.

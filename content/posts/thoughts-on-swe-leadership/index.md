@@ -6,6 +6,7 @@ authors: David Simão
 categories: [Software Engineering, Technical Leadership]
 tags: [Software Engineering, Leadership, Management, Architecture, Company Culture]
 date: 2021-03-15T00:00:00+00:00
+showSummary: true
 ---
 
 Roughly 3 years have passed since I became a lead software engineer (or tech lead) and it's been an exciting run with many achievements and pitfalls. In this article, I try to synthesise the most important lessons I've learned so far on my journey, hoping that they can be useful to other leads who are trying to develop their craft. Having headed a couple of teams until now, I still have a lot to learn, but I certainly do approach things in a different way than I did some years ago, and the results present themselves in the most unexpected ways. There’s no secret formula for leadership, It's a learning process pretty much like working with a new language or framework. I started off by reading some blogs and books, but the greatest lessons actually came from trial and error, and constructive feedback from others.

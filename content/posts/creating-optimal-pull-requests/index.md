@@ -6,6 +6,7 @@ authors: David Simão
 categories: [Software Engineering]
 tags: [Software Engineering, Pull Requests, Git, Remote Teams]
 date: 2022-08-13T00:00:00+00:00
+showSummary: true
 ---
 
 ![Pull Request Workflow](./img/pr-workflow.png)
