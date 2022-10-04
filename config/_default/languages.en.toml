@@ -1,0 +1,26 @@
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "DS"
+# logo = "img/logo.png"
+description = "Welcome to the jungle"
+copyright = "No rights reserved"
+
+dateFormat = "January 2, 2006"
+
+[author]
+  name = "David Simão"
+  image = "img/avatar.png"
+  headline = "Welcome to my page ! I'm a Software Engineer, specializing in backend, databases and distributed systems. I like programming, video-games, beer, formula 1 and occasionally writing about software engineering or life in general."
+  #bio = "A little bit about you"
+   links = [
+     { github = "https://github.com/madoke" },
+     { linkedin = "https://www.linkedin.com/in/davidsimao/" },
+     { keybase = "https://keybase.io/madoke" },
+     { goodreads = "https://www.goodreads.com/user/show/151059176-david-simao" },
+     { pgpkey = "/pgp.txt" }
+  ]
