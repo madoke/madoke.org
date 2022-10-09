@@ -3,8 +3,8 @@ slug: docusaurus-Gatsby-hugo
 title: Docusaurus vs Gatsby vs Hugo
 description: A comparison between Docusaurus, Gatsby and Hugo, as blogging frameworks and why I chose to use Hugo for implementing this blog
 author: David Simão
-categories: [Software Engineering, Website Frameworks]
-tags: [Development, Docusaurus, Hugo, Gatsby, Blogging, Markdown, React, Javascript, Typescript, Static Website]
+categories: [Frameworks]
+tags: [Docusaurus, Hugo, Gatsby, Static Websites, Blogging]
 date: 2022-07-01T00:00:00+00:00
 ---
 
