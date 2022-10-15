@@ -2,10 +2,10 @@
 slug: an-ipfs-adventure
 title: An IPFS adventure
 description: Excited with all the Web3 and self-hosting hype, I've set myself on a mission to self-host this blog on a self-hosted IPFS cluster. Here's what I learned from it
-author: David Simão
 categories: [Web3, Architecture]
 tags: [Development, IPFS, Web3, Decentralization, Filesystem, Storage]
 date: 2021-10-12T00:00:00+00:00
+showSummary: true
 ---
 
 Content sharing is today's most common internet activity, made easy and accessible to everyone thanks to cloud providers, social networks, blogging platforms etc. They spoil us with cheap, reliable and highly available services, while in return we give them our data and our attention. Most of us still don't grasp to what extent these companies exploit us, but the awareness and conversation around internet centralization are growing, and the latest cryptocurrency boom brought a wave of investment and the promise to build the so-called decentralized internet or [Web3](https://blog.cloudflare.com/what-is-web3/) and bring the [control back to the users](https://blog.coinbase.com/understanding-web-3-a-user-controlled-internet-a39c21cf83f3). Web3 is not what this article is about, but it's the reason why it happened. There's a lot of excitement and people working in the web3 scene at the moment, building groundbreaking technology and products, attempting to make web3 a reality. One such example is the [Inter Planetary File System](https://ipfs.io) (IPFS) that aims to fix the problem of content addressing and streaming on a peer-to-peer network. Drawn by the hype, and curiosity, I've set myself on the journey to build an IPFS cluster - what this article is actually about - for hosting this website. Below I'll discuss the ups and downs and some interesting (or not) conclusions about the current state of website hosting on IPFS.
