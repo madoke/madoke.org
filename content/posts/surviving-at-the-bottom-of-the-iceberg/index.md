@@ -2,7 +2,6 @@
 slug: surviving-at-the-bottom-of-the-iceberg
 title: Surviving at the bottom of the iceberg
 description: A classic tale of a team that deluded themselves with the mirage of breaking a monolith into shiny new microservices on a limited budget, understaffed and fast-paced environment
-author: David Simão
 categories: [Software Engineering]
 tags: [Software Engineering, Legacy, Monolith, Refactoring, Scalability, Business Value]
 date: 2021-08-06T00:00:00+00:00

@@ -2,7 +2,6 @@
 slug: thoughts-on-swe-leadership
 title: Thoughts on software engineering leadership
 description: An overview of some personal experiences on the engineering leadership track and opinionated advice that derived from them
-authors: David Simão
 categories: [Software Engineering, Technical Leadership]
 tags: [Software Engineering, Leadership, Management, Architecture, Company Culture]
 date: 2021-03-15T00:00:00+00:00

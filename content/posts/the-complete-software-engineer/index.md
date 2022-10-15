@@ -2,7 +2,6 @@
 slug: the-complete-software-engineer
 title: The complete software engineer
 description: What does it take to excel as a software engineer and what other aspects beyond programming can help us differentiate ?
-authors: David Simão
 categories: [Career Development, Software Engineering]
 tags: [Software Engineering, DevOps, SRE, Company Culture, Security, Observability, Monitoring, Documentation, Product]
 date: 2021-05-09T00:00:00+00:00
