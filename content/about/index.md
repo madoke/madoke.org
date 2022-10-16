@@ -1,11 +1,19 @@
 ---
 title: "About"
-layout: "single"
-url: "/about/"
-summary: About
-disableShare: true
-hideMeta: true
-ShowToc: false
+
+showDate: false
+showDateUpdated: false
+showHeadingAnchors: false
+showPagination: false
+showReadingTime: false
+showTableOfContents: false
+showTaxonomies: false
+showWordCount: false
+showSummary: false
+sharingLinks: false
+showAuthor: false
+showViews: false
+showEdit: false
 ---
 
 Hello ! my name is David and I'm a Software Engineer. I specialize in backend systems but also have experience with full stack. Most of my career has circled around building microservices, web apps and deconstructing or stabilizing legacy monoliths.

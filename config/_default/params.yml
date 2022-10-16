@@ -1,0 +1,15 @@
+---
+colorScheme: noir
+
+enableSearch: true
+
+homepage:
+  showRecent: true
+  showRecentItems: 5
+  showMoreLink: true
+  showMoreLinkDest: /blog
+
+footer:
+  links:
+    - ipfs: ipfs.madoke.org
+    - rss: /blog/index.xml

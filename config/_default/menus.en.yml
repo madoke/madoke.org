@@ -1,0 +1,14 @@
+---
+main:
+  - name: Blog
+    pageRef: blog
+    weight: 1
+  - name: About
+    pageRef: about
+    weight: 2
+  - identifier: github
+    pre: github
+    url: https://github.com/madoke/madoke.org
+    weight: 4
+
+footer: []

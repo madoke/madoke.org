@@ -1,61 +1,21 @@
-baseURL: /
-languageCode: 'en-us'
-title: 'DS'
-paginate: 5
-theme: 'PaperMod'
+theme: blowfish
+baseUrl: /
+defaultContentLanguage: en
+
 enableInlineShortcodes: true
+enableRobotsTXT: true
+paginate: 5
+summaryLength: 30
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-pygmentsUseClasses: true
-permalinks:
-  posts: '"blog/:slug'
-copyright: No rights reserved.
 
-# Static build output formats
 outputs:
   home:
     - HTML
     - RSS
-    - JSON # is necessary
-
-params:
-  defaultTheme: auto
-  disableThemeToggle: false
-  homeInfoParams:
-    Title: David Simão
-    Content: >
-      Welcome to my page ! I'm a Software Engineer, specializing in backend, databases and distributed systems. I like programming, video-games, beer, formula 1 and occasionally writing about software engineering or life in general.
-  socialIcons:
-    - name: github
-      url: https://github.com/madoke
-    - name: linkedin
-      url: https://www.linkedin.com/in/davidsimao/
-    - name: keybase
-      url: https://keybase.io/madoke
-    - name: goodreads
-      url: https://www.goodreads.com/user/show/151059176-david-simao
-    - name: pgpkey
-      url: /pgp.txt
-  author: David Simão
-  ShowPostNavLinks: true
-  ShowReadingTime: true
-  ShowToc: true
-  ShowBreadCrumbs: false
-  ShowShareButtons: false
-  ShowCodeCopyButtons: true
-  displayFullLangName: true
-  editPost:
-    URL: "https://github.com/madoke/madoke.org/tree/master/content"
-    Text: "Suggest Changes"
-    appendFilePath: true
-  footer:
-    icons:
-      - name: ipfs
-        url: https://ipfs.madoke.org
-      - name: rss
-        url: /index.xml
+    - JSON
 
 markup:
   goldmark:
