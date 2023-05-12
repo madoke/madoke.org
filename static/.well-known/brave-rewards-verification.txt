@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: wtjungle.com
+Token: 29f29787dfae7766254d058977f14ea26b165175c49bcf8ad1d6c11bfc874293
