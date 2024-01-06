@@ -1,14 +1,10 @@
 ---
 main:
-  - name: About
-    pageRef: about
-    weight: 1
   - name: Blog
     url: https://jungle.madoke.org
+    weight: 1 
+  - name: Projects
+    pageRef: projects
     weight: 2
-  - identifier: github
-    pre: github
-    url: https://github.com/madoke/madoke.org
-    weight: 4
 
 footer: []

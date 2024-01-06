@@ -1,7 +1,7 @@
 ---
 colorScheme: noir
 
-enableSearch: true
+enableSearch: false
 
 homepage:
   layout: profile
