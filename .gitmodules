@@ -1,4 +1,5 @@
 [submodule "themes/blowfish"]
-	path = themes/blowfish
-  url = https://github.com/madoke/blowfish
+  path = themes/blowfish
+  url = https://github.com/madoke/blowfish.git
   branch = main
+  shallow = true
