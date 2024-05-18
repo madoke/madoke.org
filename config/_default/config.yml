@@ -1,12 +1,18 @@
 theme: blowfish
-baseUrl: /
+
+baseUrl: https://davidsimao.xyz
+title: "David Simao"
 defaultContentLanguage: en
+paginate: 10
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 5
+enableEmoji: true
+enableGitInfo: true
+canonifyURLs: true
+
 summaryLength: 30
-enableRobotsTXT: true
+
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -27,4 +33,9 @@ markup:
     codeFences: true
     guessSyntax: true
     lineNos: true
-    style: monokai
+    style: nord
+
+taxonomies:
+  tag: tags
+  category: categories
+  author: authors

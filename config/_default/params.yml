@@ -1,7 +1,38 @@
 ---
 colorScheme: noir
+logo: img/logo.png
 
 enableSearch: false
 
+list:
+  showSummary: true
+
+article:
+  showHero: true
+  heroStyle: big
+  layoutBackgroundBlur: true
+  showViews: false
+  showSummary: true
+  sharingLinks: false
+  showAuthorsBadges: true
+  showTaxonomies: false
+  showTableOfContents: true
+  showEdit: false
+  showAuthor: false
+  showAuthorsBadges: false
+
 homepage:
   layout: profile
+  showRecent: false
+
+taxonomy:
+  showSummary: true
+
+term:
+  showSummary: true
+  showHero: true
+  heroStyle: basic
+
+header:
+  layout: basic
+  showAppearanceSwitcher: true

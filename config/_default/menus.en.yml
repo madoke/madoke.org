@@ -1,10 +1,13 @@
 ---
 main:
   - name: Blog
-    url: https://jungle.madoke.org
+    pageRef: blog
     weight: 1 
   - name: Projects
     pageRef: projects
+    weight: 2
+  - name: RSS
+    url: /index.xml
     weight: 2
 
 footer: []
